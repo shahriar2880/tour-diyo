@@ -29,7 +29,7 @@ const About = () => {
                   HOW WE ARE BEST FOR TRAVEL !
                 </h2>
                 <p className="body-text mb-2">
-                  <span className="font-bold">Tour Diyo!</span> is a trusted
+                  <span className="font-bold">Tour Dojo!</span> is a trusted
                   travel agency offering exceptional experiences across the
                   world’s most iconic destinations — including the Maldives,
                   Goa, Bali, Dubai, London, New York, and Santorini. trusted by

@@ -41,7 +41,7 @@ const Header = () => {
           <Navbar expand="lg" className="p-0">
             {/* Logo Section  */}
             <Navbar.Brand>
-              <NavLink to="/">Tour Diyo</NavLink>
+              <NavLink to="/">Tour Dojo</NavLink>
             </Navbar.Brand>
             {/* End Logo Section  */}
 
@@ -53,7 +53,7 @@ const Header = () => {
             >
               {/*mobile Logo Section  */}
               <Offcanvas.Header>
-                <h1 className="logo">Tour Diyo</h1>
+                <h1 className="logo">Tour Dojo</h1>
                 <span className="navbar-toggler ms-auto"  onClick={toggleMenu}>
                   <i className="bi bi-x-lg"></i>
                 </span>

@@ -189,7 +189,7 @@ const Home = () => {
                 READY FOR UNFORGATABLE TRAVEL. REMEMBER US!
               </h2>
               <p className="text">
-                Embark on unforgettable journeys with <span className="font-bold">Tour Diyo</span> —
+                Embark on unforgettable journeys with <span className="font-bold">Tour Dojo</span> —
                 your trusted travel companion for dream vacations across the
                 globe. Whether you're craving serene beaches, thrilling
                 adventures, or cultural escapes, we tailor every trip to match
