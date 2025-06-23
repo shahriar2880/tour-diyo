@@ -1,67 +1,54 @@
-import React from 'react'
-import Lightroom from 'react-lightbox-gallery'
-import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
-import GalleryImg2 from "../../assets/images/gallery/g2.jpg"
-import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
-import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
-import GalleryImg5 from "../../assets/images/gallery/g5.jpg"
-import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
-import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
-import './Gallery.css';
-
+import React, { useState } from "react";
+import GalleryImg1 from "../../assets/images/gallery/g1.jpg";
+import GalleryImg2 from "../../assets/images/gallery/g2.jpg";
+import GalleryImg3 from "../../assets/images/gallery/g3.jpg";
+import GalleryImg4 from "../../assets/images/gallery/g4.jpg";
+import GalleryImg5 from "../../assets/images/gallery/g5.jpg";
+import GalleryImg6 from "../../assets/images/gallery/g6.jpg";
+import GalleryImg7 from "../../assets/images/gallery/g7.jpg";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import "./Gallery.css";
 
 const Gallery = () => {
+  const [open, setOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
-    var images = [
-        {
-            src: GalleryImg1,
-            desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
-        },
-        {
-            src: GalleryImg2,
-            desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
-        },
-        {
-            src: GalleryImg3,
-            desc: "Blonde woman wearing sunglasses smiling at the camera ",
-            sub: "Dmitriy Frantsev"
-        },
-        {
-            src: GalleryImg4,
-            sub: "Harry Cunningham"
-        },
-        {
-            src: GalleryImg5,
-            desc: "Jaipur , Rajasthan India",
-            sub: "Liam Baldock"
-        },
-        {
-            src: GalleryImg6,
-            sub: "Verne Ho"
-        },
-        {
-            src: GalleryImg7,
-            desc: "Rann of kutch , India",
-            sub: "Hari Nandakumar"
-        },
-    ];
+  const images = [
+    GalleryImg1,
+    GalleryImg2,
+    GalleryImg3,
+    GalleryImg4,
+    GalleryImg5,
+    GalleryImg6,
+    GalleryImg7,
+  ];
 
-    var settings = {
-        columnCount: {
-            default: 3,
-            mobile: 2,
-            tab: 3
-        },
-        mode: "dark",
-        enableZoom:false,
-    };
-    return (
-        <div className='gallery'>
-        <Lightroom images={images} settings={settings} />
-        </div>
-   );
-}
+  return (
+    <div className="gallery-grid">
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt={`Gallery ${index + 1}`}
+          onClick={() => {
+            setPhotoIndex(index);
+            setOpen(true);
+          }}
+          className="gallery-img"
+        />
+      ))}
 
-export default Gallery
+      {open && (
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          index={photoIndex}
+          slides={images.map((src) => ({ src }))}
+        />
+      )}
+    </div>
+  );
+};
+
+export default Gallery;
