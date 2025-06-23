@@ -8,7 +8,7 @@ footer h4 {
   color: whitesmoke;
   line-height: 150%;
   font-weight: bold;
-  padding: 0 0 18px 0;
+  padding: 0 0 14px 0;
   margin: 0;
 }
 
@@ -61,7 +61,7 @@ footer .bdr {
     line-height: 47px;
     text-align: center;
     position: fixed;
-    right: 20px;
+    right: 15px;
     bottom: 50px;
     width: 45px;
     height: 45px;

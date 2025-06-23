@@ -106,7 +106,7 @@ const Contact = () => {
                   <div className=" d-block justify-content-between">
                     <a
                       type="button"
-                      href="mailto:shahriar436@gmail.com"
+                      href="mailto:shahriarreza436@gmail.com"
                       className="btn btn-light me-2 btn-sm"
                     >
                       <i className="bi bi-envelope me-1"></i>

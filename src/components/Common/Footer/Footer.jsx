@@ -31,7 +31,7 @@ const Footer = () => {
       <footer className="pt-5">
         <Container>
           <Row>
-            <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 ">
+            <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 mx-0">
               <h4 className="mt-lg-0 mt-sm-3">Company </h4>
               <ListGroup variant="flush">
                 <ListGroup.Item>
@@ -80,15 +80,15 @@ const Footer = () => {
                 <p className="pb-2"> Mohammadpur, Dhaka, Bangladesh</p>
               </div>
 
-              <div className="d-flex align-items-top my-2">
+              <div className="d-flex align-items-top my-1">
                 <i className="bi bi-geo-alt me-1"></i>
                 <a
-                  href="mailto:shahriar436@gmail.com"
+                  href="mailto:shahriarreza436@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="d-block"
+                  className="text-break d-inline-block w-100"
                 >
-                  shahriar436@gmail.com
+                  shahriarreza436@gmail.com
                 </a>
               </div>
               <div className="d-flex align-items-top ">
